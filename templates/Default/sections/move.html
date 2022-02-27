@@ -1,12 +1,18 @@
-<div class="card">
+<div class="card" style="margin-top:10px;">
     <div class="card-body">
-        <h6>Перемещение раздела</h6>
-        <form method="POST" action="../kernel/section.php">
+        <div class="float-start">
+            <h6>Перемещение раздела</h6>
             <b>{[SECTION_NAME]}</b>
-            <input type="hidden" name="MovedSectionParentUUID" value="{[PARENT_UUID]}"/>
-            <hr/>
-            <input type="submit" class="btn btn-outline-success" value="Переместить сюда"/>
-        </form>
+        </div>
+        <div class="float-end d-inline-flex" style="margin-top:6px;">
+            <form method="POST" action="../kernel/section.php">
+                <input type="hidden" name="MovedSectionParentUUID" value="{[PARENT_UUID]}"/>
+                <input type="submit" class="btn btn-outline-success" value="Переместить сюда"/>
+            </form>
+            <form method="POST" action="../kernel/section.php">
+                <input type="submit" class="btn btn-outline-primary" style="margin-left:10px;" name="CancelMoveSection" value="Отменить перемещение"/>
+            </form>
+        </div>
     </div>
 </div>
 

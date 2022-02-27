@@ -5,8 +5,63 @@
     <title>{[SITE_TITLE]}</title>
     <link rel="stylesheet" href="{[STYLE_URL]}css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+        .card{
+            box-shadow: 0px 1px 4px rgb(179, 163, 163);
+            margin-bottom: 10px;
+            border: 0px;
+        }
+        .card-body{
+            padding: 15px;
+        }
+        .card-header{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .navbar{
+            box-shadow: 0px 1px 9px rgb(179, 163, 163);
+        }
+        .row{
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .col-4,.col-3,.col,.col-sm,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11{
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+        .alert{
+            color: white;
+            box-shadow: 0px 1px 4px rgb(179, 163, 163);
+        }
+        .alert-danger{
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        .alert-success{
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .alert-primary{
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
+        .hover:hover{
+            background-color: #dee2e6;
+        }
+        .btn-light{
+            background-color: #fff;
+            border: 0;
+        }
+        .btn-light:hover{
+            background-color: #f8f9fa;
+        }
+        .row-normal{
+            padding-right:0px;
+            padding-left:0px
+        }
+    </style>
 </head>
-<body>
+<body style="background-color: #f2f2f2!important;">
     <div class="container-sm">
         {[NOTIFICATIONS]}
         {[SITE_CONTENT]}

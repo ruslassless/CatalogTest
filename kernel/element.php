@@ -46,6 +46,17 @@
             Kernel::MoveTo("/");
         }
     }
+    if(Kernel::Post("CancelMoveElement") !== null){
+        try{
+            $Element = Element::FromDBByUUID($_COOKIE['ELEMENT_MOVE_UUID']);
+            $Element->EndMove();
+            Kernel::MoveTo("/");
+        }
+        catch(Exception $e){
+            Notification::Add("", Notification::Error, "Неизвестная ошибка!");
+            Kernel::MoveTo("/");
+        }
+    }
     $ItsCreate = false;
     if(Kernel::Get("element_uuid") !== null){
         if(!Kernel::UUIDValidate(Kernel::Get("element_uuid"))){

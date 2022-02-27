@@ -54,6 +54,17 @@
             Kernel::MoveTo("/");
         }
     }
+    if(Kernel::Post("CancelMoveSection") !== null){
+        try{
+            $Section = Section::FromDBByUUID($_COOKIE['SECTION_MOVE_UUID']);
+            $Section->EndMove();
+            Kernel::MoveTo("/?section_uuid=".$_COOKIE['SECTION_MOVE_UUID']);
+        }
+        catch(Exception $e){
+            Notification::Add("", Notification::Error, "Неизвестная ошибка!");
+            Kernel::MoveTo("/");
+        }
+    }
     $ItsCreate = false;
     if(Kernel::Get("section_uuid") !== null){
         if(!Kernel::UUIDValidate(Kernel::Get("section_uuid"))){
