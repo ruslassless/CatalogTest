@@ -1,0 +1,22 @@
+<div class="position-absolute top-50 start-50 translate-middle" style="min-width:500px;">
+    <div class="card" style="max-width: 500px;">
+        <div class="card-body">
+            <h6>Добавление раздела</h6>
+            <hr/>
+            <form method="POST" action="../kernel/section.php">
+                <label>Название:</label>
+                <input type="text" name="NewSectionName" class="form-control form-control-sm"/>
+                <label>Описание:</label>
+                <input type="text" name="NewSectionDescription" class="form-control form-control-sm"/>
+                <label>В раздел:</label><br/>
+                <b>{[SECTION_NAME]}</b><br/>
+                <input type="hidden" name="FormToken" value="{[FORM_TOKEN]}"/>
+                <input type="hidden" name="NewSectionParentUUID" value="{[SECTION_UUID]}"/>
+                <hr/>
+                <input type="submit" class="btn btn-outline-success" value="Добавить раздел"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+

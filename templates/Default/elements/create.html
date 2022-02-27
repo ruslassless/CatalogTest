@@ -1,0 +1,29 @@
+<div class="position-absolute top-50 start-50 translate-middle" style="min-width:500px;">
+    <div class="card" style="max-width: 500px;">
+        <div class="card-body">
+            <h6>Добавление элемента</h6>
+            <hr/>
+            <form method="POST" action="../kernel/element.php">
+                <label>Название:</label>
+                <input type="text" name="NewElementName" class="form-control form-control-sm"/>
+                <label>Тип:</label>
+                <select name="NewElementType" class="form-control form-control-sm">
+                    <option value="Article">Новость</option>
+                    <option value="Paper">Статья</option>
+                    <option value="Review">Отзыв</option>
+                    <option value="Comment">Комментарий</option>
+                </select>
+                <label>Содержание:</label>
+                <input type="text" name="NewElementData" class="form-control form-control-sm"/>
+                <label>В раздел:</label><br/>
+                <b>{[SECTION_NAME]}</b><br/>
+                <input type="hidden" name="FormToken" value="{[FORM_TOKEN]}"/>
+                <input type="hidden" name="NewElementSectionUUID" value="{[SECTION_UUID]}"/>
+                <hr/>
+                <input type="submit" class="btn btn-outline-success" value="Добавить элемент"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+

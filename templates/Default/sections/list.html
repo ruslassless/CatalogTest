@@ -1,0 +1,32 @@
+<div>
+    <div class="card" style="margin-top: 10px;">
+        <div class="card-body">
+            <div class="float-end">
+                <a class="btn btn-outline-success" href="/?page=sections&parent_uuid={[CURRENT_SECTION_UUID]}">
+                    Добавить раздел в текущий раздел
+                </a>
+                <a class="btn btn-outline-primary" href="/?page=elements&section_uuid={[CURRENT_SECTION_UUID]}" style="margin-left: 10px;">
+                    Добавить элемент в текущий раздел
+                </a>
+            </div>
+        </div>
+        <hr style="margin-top: 0;margin-bottom: 0;height:0.5px;"/>
+        <div class="card-body">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <td style="width:50px;"></td>
+                    <td><small class="text-muted">Название</small></td>
+                    <td style="vertical-align: middle;white-space: nowrap;align-items: center;width:1px;"><small class="text-muted">Создан</small></td>
+                    <td style="vertical-align: middle;white-space: nowrap;align-items: center;width:1px;"><small class="text-muted">Дата изменения</small></td>
+                    <td style="vertical-align: middle;white-space: nowrap;align-items: center;width:1px;"><small class="text-muted">Тип</small></td>
+                    <td></td>
+                </thead>
+                <tbody>
+                    {[SECTIONS_LIST]}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

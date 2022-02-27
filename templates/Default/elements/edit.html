@@ -1,0 +1,33 @@
+<div class="position-absolute top-50 start-50 translate-middle" style="min-width:500px;">
+    <div class="card" style="max-width: 500px;">
+        <div class="card-body">
+            <h6>Изменение элемента</h6>
+            <hr/>
+            <form method="POST" action="../kernel/element.php?element_uuid={[ELEMENT_UUID]}">
+                <label>Идентификатор:</label><br/>
+                <b>{[ELEMENT_UUID]}</b><br/>
+                <label>Название:</label>
+                <input type="text" name="ElementName" class="form-control form-control-sm" value="{[ELEMENT_NAME]}"/>
+                <label>Описание:</label>
+                <input type="text" name="ElementData" class="form-control form-control-sm" value="{[ELEMENT_DATA]}"/>
+                <label>Тип:</label><br/>
+                <b>{[ELEMENT_TYPE]}</b><br/>
+                <label>В разделе:</label><br/>
+                <b>{[ELEMENT_SECTION_NAME]}</b><br/>
+                <input type="hidden" name="ElementSectionUUID" value="{[ELEMENT_SECTION_UUID]}"/>
+                <input type="hidden" name="FormToken" value="{[FORM_TOKEN]}"/>
+                <label>Раздел создан:</label><br/>
+                <b>{[ELEMENT_CREATED]}</b><br/>
+                <label>Последнее изменение:</label><br/>
+                <b>{[ELEMENT_UPDATED]}</b><br/>
+                <hr/>
+                <div class="d-inline-flex">
+                    <input type="submit" class="btn btn-outline-success" name="ApplicationSave" value="Сохранить"/>
+                    <a href="/" class="btn btn-outline-primary" style="margin-left: 10px;">Вернуться к каталогу</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

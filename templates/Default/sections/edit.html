@@ -1,0 +1,31 @@
+<div class="position-absolute top-50 start-50 translate-middle" style="min-width:500px;">
+    <div class="card" style="max-width: 500px;">
+        <div class="card-body">
+            <h6>Изменение раздела</h6>
+            <hr/>
+            <form method="POST" action="../kernel/section.php?section_uuid={[SECTION_UUID]}">
+                <label>Идентификатор:</label><br/>
+                <b>{[SECTION_UUID]}</b><br/>
+                <label>Название:</label>
+                <input type="text" name="SectionName" class="form-control form-control-sm" value="{[SECTION_NAME]}"/>
+                <label>Описание:</label>
+                <input type="text" name="SectionDescription" class="form-control form-control-sm" value="{[SECTION_DESCRIPTION]}"/>
+                <label>В разделе:</label><br/>
+                <b>{[SECTION_PARENT_NAME]}</b><br/>
+                <input type="hidden" name="SectionParentUUID" value="{[SECTION_PARENT_UUID]}"/>
+                <input type="hidden" name="FormToken" value="{[FORM_TOKEN]}"/>
+                <label>Раздел создан:</label><br/>
+                <b>{[SECTION_CREATED]}</b><br/>
+                <label>Последнее изменение:</label><br/>
+                <b>{[SECTION_UPDATED]}</b><br/>
+                <hr/>
+                <div class="d-inline-flex">
+                    <input type="submit" class="btn btn-outline-success" name="ApplicationSave" value="Сохранить"/>
+                    <a href="/" class="btn btn-outline-primary" style="margin-left: 10px;">Вернуться к каталогу</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
